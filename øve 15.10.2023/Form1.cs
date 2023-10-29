@@ -16,6 +16,8 @@ namespace øve_15._10._2023
     {
         List<string> ingredienserListe = new List<string>();
 
+        
+
         private Dictionary<string, string> myDictionary1 = new Dictionary<string, string>();
 
         private Dictionary<string, string> myDictionary2 = new Dictionary<string, string>();
