@@ -8,12 +8,17 @@ namespace øve_15._10._2023
 {
     public class Ingredienser
     {
-        List<string> ingredienserListe = new List<string>();
 
-        
 
-       
+        private List<string> ingredienserListe;
 
+        // Constructor der modtager en liste af ingredienser som parameter
+        public Ingredienser(List<string> ingredienser)
+        {
+            ingredienserListe = ingredienser;
+        }
+
+        // Eventuelle andre metoder eller egenskaber i klassen
 
     }
 }
