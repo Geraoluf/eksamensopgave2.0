@@ -49,7 +49,7 @@
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.SuspendLayout();
@@ -149,14 +149,14 @@
             // txtvismenu
             // 
             this.txtvismenu.FormattingEnabled = true;
-            this.txtvismenu.Location = new System.Drawing.Point(698, 416);
+            this.txtvismenu.Location = new System.Drawing.Point(673, 383);
             this.txtvismenu.Name = "txtvismenu";
             this.txtvismenu.Size = new System.Drawing.Size(120, 69);
             this.txtvismenu.TabIndex = 5;
             // 
             // bntvismenu
             // 
-            this.bntvismenu.Location = new System.Drawing.Point(617, 462);
+            this.bntvismenu.Location = new System.Drawing.Point(506, 429);
             this.bntvismenu.Name = "bntvismenu";
             this.bntvismenu.Size = new System.Drawing.Size(75, 23);
             this.bntvismenu.TabIndex = 6;
@@ -166,7 +166,7 @@
             // 
             // txtsøgefelt
             // 
-            this.txtsøgefelt.Location = new System.Drawing.Point(617, 416);
+            this.txtsøgefelt.Location = new System.Drawing.Point(504, 387);
             this.txtsøgefelt.Name = "txtsøgefelt";
             this.txtsøgefelt.Size = new System.Drawing.Size(75, 20);
             this.txtsøgefelt.TabIndex = 7;
@@ -266,22 +266,22 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "Menunavn";
             // 
-            // button4
+            // Button4
             // 
-            this.button4.Location = new System.Drawing.Point(377, 262);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.Button4.Location = new System.Drawing.Point(832, 278);
+            this.Button4.Name = "Button4";
+            this.Button4.Size = new System.Drawing.Size(75, 23);
+            this.Button4.TabIndex = 21;
+            this.Button4.Text = "Slet menu";
+            this.Button4.UseVisualStyleBackColor = true;
+            this.Button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 497);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.Button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.radioButton3);
@@ -331,7 +331,7 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Button4;
     }
 }
 
