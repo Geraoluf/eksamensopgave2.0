@@ -78,34 +78,34 @@ namespace øve_15._10._2023
                     break;
 
                 default:
-                    MessageBox.Show(valgtmåltid);
+                    MessageBox.Show("Du skal først vælge et måltid");
                     break;
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
+            Menuer.Items.Clear();
 
             if (valgtmåltid == "morgen")
             {
                 foreach (var item in myDictionary1)
                 {
-                    listBox1.Items.Add($"{item.Key}: {item.Value}");
+                    Menuer.Items.Add($"{item.Key}: {item.Value}");
                 }
             }
             else if (valgtmåltid == "frokost")
             {
                 foreach (var item in myDictionary2)
                 {
-                    listBox1.Items.Add($"{item.Key}: {item.Value}");
+                    Menuer.Items.Add($"{item.Key}: {item.Value}");
                 }
             }
             else if (valgtmåltid == "aftenmåltid")
             {
                 foreach (var item in myDictionary3)
                 {
-                    listBox1.Items.Add($"{item.Key}: {item.Value}");
+                    Menuer.Items.Add($"{item.Key}: {item.Value}");
                 }
             }
         }
@@ -117,30 +117,16 @@ namespace øve_15._10._2023
             textBox1.Clear();
         }
 
-        private void bntvismenu_Click(object sender, EventArgs e)
-        {
-            string word = txtsøgefelt.Text;
-
-            if (myDictionary2.ContainsKey(word))
-            {
-                txtvismenu.Items.Clear();
-                txtvismenu.Items.Add(myDictionary2[word]);
-            }
-            else
-            {
-                txtvismenu.Items.Clear();
-                txtvismenu.Items.Add("Nøgle ikke fundet");
-            }
-        }
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
             // Få den markerede vare fra listBox1
-            string selectedKey = listBox1.SelectedItem?.ToString();
+            string selectedKey = Menuer.SelectedItem?.ToString();
 
             if (string.IsNullOrEmpty(selectedKey))
             {
-                MessageBox.Show("Vælg en post at slette.");
+                MessageBox.Show("Vælg en menu du vil slette");
                 return;
             }
 
@@ -173,11 +159,11 @@ namespace øve_15._10._2023
                 // Opdater listBox1
                 button2_Click(sender, e);
 
-                MessageBox.Show("Posten er slettet.");
+                MessageBox.Show("Menuen er slettet.");
             }
             else
             {
-                MessageBox.Show("Ugyldig markeret post.");
+                MessageBox.Show("Ugyldigt.");
             }
         }
 
