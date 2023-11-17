@@ -132,6 +132,55 @@ namespace øve_15._10._2023
                 txtvismenu.Items.Add("Nøgle ikke fundet");
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Få den markerede vare fra listBox1
+            string selectedKey = listBox1.SelectedItem?.ToString();
+
+            if (string.IsNullOrEmpty(selectedKey))
+            {
+                MessageBox.Show("Vælg en post at slette.");
+                return;
+            }
+
+            // Opdel den markerede vare for at få nøglen
+            string[] parts = selectedKey.Split(':');
+            if (parts.Length == 2)
+            {
+                string key = parts[0].Trim();
+
+                // Fjern den markerede vare fra den relevante dictionary baseret på valgtmåltid
+                switch (valgtmåltid)
+                {
+                    case "morgen":
+                        myDictionary1.Remove(key);
+                        break;
+
+                    case "frokost":
+                        myDictionary2.Remove(key);
+                        break;
+
+                    case "aftenmåltid":
+                        myDictionary3.Remove(key);
+                        break;
+
+                    default:
+                        MessageBox.Show("Ugyldig valgt måltid.");
+                        break;
+                }
+
+                // Opdater listBox1
+                button2_Click(sender, e);
+
+                MessageBox.Show("Posten er slettet.");
+            }
+            else
+            {
+                MessageBox.Show("Ugyldig markeret post.");
+            }
+        }
+    
     }
 
    
