@@ -180,7 +180,31 @@ namespace øve_15._10._2023
                 MessageBox.Show("Ugyldig markeret post.");
             }
         }
-    
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            {
+                string searchMenu = textBox3.Text;
+
+                if (string.IsNullOrWhiteSpace(searchMenu))
+                {
+                    MessageBox.Show("Indtast venligst et menunavn at søge efter.");
+                    return;
+                }
+
+                Søgmenu menuSearch = new Søgmenu(valgtmåltid, myDictionary1, myDictionary2, myDictionary3);
+                string result = menuSearch.SearchMenuAndGetIngredients(searchMenu);
+
+                if (!string.IsNullOrEmpty(result))
+                {
+                    MessageBox.Show(result);
+                }
+                else
+                {
+                    MessageBox.Show($"Menuen med navnet '{searchMenu}' blev ikke fundet.");
+                }
+            }
+        }
     }
 
    

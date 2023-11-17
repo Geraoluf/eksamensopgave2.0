@@ -36,9 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.txtvismenu = new System.Windows.Forms.ListBox();
-            this.bntvismenu = new System.Windows.Forms.Button();
-            this.txtsøgefelt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -50,6 +47,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.SuspendLayout();
@@ -145,32 +144,6 @@
             this.radioButton1.Text = "Morgenmåltid";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // txtvismenu
-            // 
-            this.txtvismenu.FormattingEnabled = true;
-            this.txtvismenu.Location = new System.Drawing.Point(673, 383);
-            this.txtvismenu.Name = "txtvismenu";
-            this.txtvismenu.Size = new System.Drawing.Size(120, 69);
-            this.txtvismenu.TabIndex = 5;
-            // 
-            // bntvismenu
-            // 
-            this.bntvismenu.Location = new System.Drawing.Point(506, 429);
-            this.bntvismenu.Name = "bntvismenu";
-            this.bntvismenu.Size = new System.Drawing.Size(75, 23);
-            this.bntvismenu.TabIndex = 6;
-            this.bntvismenu.Text = "Søg menu";
-            this.bntvismenu.UseVisualStyleBackColor = true;
-            this.bntvismenu.Click += new System.EventHandler(this.bntvismenu_Click);
-            // 
-            // txtsøgefelt
-            // 
-            this.txtsøgefelt.Location = new System.Drawing.Point(504, 387);
-            this.txtsøgefelt.Name = "txtsøgefelt";
-            this.txtsøgefelt.Size = new System.Drawing.Size(75, 20);
-            this.txtsøgefelt.TabIndex = 7;
-            this.txtsøgefelt.Text = "txtsøgefelt";
             // 
             // button1
             // 
@@ -276,11 +249,30 @@
             this.Button4.UseVisualStyleBackColor = true;
             this.Button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(345, 409);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 22;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(345, 373);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 23;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 497);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.Button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -292,9 +284,6 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtsøgefelt);
-            this.Controls.Add(this.bntvismenu);
-            this.Controls.Add(this.txtvismenu);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -318,9 +307,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.ListBox txtvismenu;
-        private System.Windows.Forms.Button bntvismenu;
-        private System.Windows.Forms.TextBox txtsøgefelt;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox listBox1;
@@ -332,6 +318,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 
