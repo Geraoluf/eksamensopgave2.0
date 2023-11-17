@@ -8,17 +8,41 @@ namespace øve_15._10._2023
 {
     public class Ingredienser
     {
+        private List<string> _ingredienser;
 
 
-        private List<string> ingredienserListe;
-
-        // Constructor der modtager en liste af ingredienser som parameter
         public Ingredienser(List<string> ingredienser)
         {
-            ingredienserListe = ingredienser;
+            _ingredienser = ingredienser;
         }
 
-        // Eventuelle andre metoder eller egenskaber i klassen
 
+
+        public void Add(string ingrediens)
+        {
+            _ingredienser.Add(ingrediens);
+        }
+
+
+
+        public void Clear()
+        {
+            _ingredienser.Clear();
+        }
+
+
+
+        public override string ToString()
+        {
+            if (_ingredienser.Any())
+            {
+                return string.Join(",", _ingredienser);
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
     }
+
 }

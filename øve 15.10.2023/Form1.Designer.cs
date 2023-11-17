@@ -130,7 +130,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(187, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(643, 82);
+            this.panel2.Size = new System.Drawing.Size(849, 82);
             this.panel2.TabIndex = 1;
             // 
             // radioButton1
@@ -196,7 +196,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(673, 101);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(135, 160);
+            this.listBox1.Size = new System.Drawing.Size(283, 160);
             this.listBox1.TabIndex = 13;
             // 
             // button3
@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 497);
+            this.ClientSize = new System.Drawing.Size(1036, 497);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.radioButton3);
