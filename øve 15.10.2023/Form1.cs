@@ -53,7 +53,7 @@ namespace øve_15._10._2023
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string value = ingredienserListe.ToString(); // Brug ToString-metoden for at få ingredienser som en streng
+            string value = ingredienserListe.ToString(); 
             ingredienserListe.Clear();
             string key = textBox2.Text;
 
@@ -121,7 +121,7 @@ namespace øve_15._10._2023
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // Få den markerede vare fra listBox1
+          
             string selectedKey = Menuer.SelectedItem?.ToString();
 
             if (string.IsNullOrEmpty(selectedKey))
@@ -130,13 +130,13 @@ namespace øve_15._10._2023
                 return;
             }
 
-            // Opdel den markerede vare for at få nøglen
+            
             string[] parts = selectedKey.Split(':');
             if (parts.Length == 2)
             {
                 string key = parts[0].Trim();
 
-                // Fjern den markerede vare fra den relevante dictionary baseret på valgtmåltid
+               
                 switch (valgtmåltid)
                 {
                     case "morgen":
@@ -156,7 +156,7 @@ namespace øve_15._10._2023
                         break;
                 }
 
-                // Opdater listBox1
+                
                 button2_Click(sender, e);
 
                 MessageBox.Show("Menuen er slettet.");
