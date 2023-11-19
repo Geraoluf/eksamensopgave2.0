@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtMenu = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
@@ -57,86 +54,43 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Controls.Add(this.txtMenu);
             this.panel1.Controls.Add(this.panelLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(249, 612);
             this.panel1.TabIndex = 0;
             // 
-            // txtMenu
-            // 
-            this.txtMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtMenu.FlatAppearance.BorderSize = 0;
-            this.txtMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtMenu.ForeColor = System.Drawing.Color.White;
-            this.txtMenu.Location = new System.Drawing.Point(0, 101);
-            this.txtMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtMenu.Name = "txtMenu";
-            this.txtMenu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.txtMenu.Size = new System.Drawing.Size(249, 66);
-            this.txtMenu.TabIndex = 1;
-            this.txtMenu.Text = "Menu";
-            this.txtMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtMenu.UseVisualStyleBackColor = true;
-            // 
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panelLogo.Controls.Add(this.label3);
             this.panelLogo.Controls.Add(this.label2);
-            this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(249, 101);
             this.panelLogo.TabIndex = 0;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(97, 27);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "ENU";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 66);
+            this.label2.Location = new System.Drawing.Point(25, 43);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 14);
+            this.label2.Size = new System.Drawing.Size(183, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Food Registration";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(55, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "M";
+            this.label2.Text = "Registrering af menuer";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(249, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1132, 101);
             this.panel2.TabIndex = 1;
@@ -146,7 +100,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(321, 124);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(123, 24);
             this.radioButton1.TabIndex = 2;
@@ -158,7 +112,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(675, 190);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(53, 28);
             this.button1.TabIndex = 10;
@@ -170,7 +124,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(924, 492);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 41);
             this.button2.TabIndex = 12;
@@ -185,7 +139,7 @@
             this.Menuer.FormattingEnabled = true;
             this.Menuer.ItemHeight = 16;
             this.Menuer.Location = new System.Drawing.Point(924, 124);
-            this.Menuer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Menuer.Margin = new System.Windows.Forms.Padding(4);
             this.Menuer.Name = "Menuer";
             this.Menuer.Size = new System.Drawing.Size(275, 356);
             this.Menuer.TabIndex = 13;
@@ -193,7 +147,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(675, 252);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(53, 28);
             this.button3.TabIndex = 14;
@@ -204,7 +158,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(321, 255);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 15;
@@ -212,7 +166,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(321, 192);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 16;
@@ -222,7 +176,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.Location = new System.Drawing.Point(493, 124);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(81, 24);
             this.radioButton2.TabIndex = 17;
@@ -236,7 +190,7 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.Location = new System.Drawing.Point(609, 124);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(108, 24);
             this.radioButton3.TabIndex = 18;
@@ -270,7 +224,7 @@
             // Button4
             // 
             this.Button4.Location = new System.Drawing.Point(1064, 492);
-            this.Button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Button4.Margin = new System.Windows.Forms.Padding(4);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(136, 41);
             this.Button4.TabIndex = 21;
@@ -281,7 +235,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(519, 437);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(133, 28);
             this.button5.TabIndex = 22;
@@ -292,7 +246,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(321, 441);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(177, 22);
             this.textBox3.TabIndex = 23;
@@ -332,7 +286,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Ingredienser";
             this.panel1.ResumeLayout(false);
@@ -346,10 +300,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button txtMenu;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton radioButton1;
