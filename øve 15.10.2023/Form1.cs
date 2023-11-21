@@ -191,6 +191,33 @@ namespace øve_15._10._2023
                 }
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            Dato minDato = new Dato(2023, 12, 21);  //indtaster datoerne til dato klasse
+
+           
+            Slettedato obj = new Slettedato(minDato);  //kalder slutdatoklassen og bruger parameter minDato
+
+
+
+            MessageBox.Show(obj.HentSlettedato().ToString());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
     }
 
    
