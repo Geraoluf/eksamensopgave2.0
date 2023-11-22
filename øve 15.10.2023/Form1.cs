@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace øve_15._10._2023
 {
     public partial class Form1 : Form
@@ -19,41 +20,39 @@ namespace øve_15._10._2023
         private Dictionary<string, string> myDictionary1 = new Dictionary<string, string>();
         private Dictionary<string, string> myDictionary2 = new Dictionary<string, string>();
         private Dictionary<string, string> myDictionary3 = new Dictionary<string, string>();
+        string valgtmåltid;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        string valgtmåltid;
+       
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
-            {
-                valgtmåltid = "morgen";
-            }
+           
+            valgtmåltid = radioButton1.Checked ? "morgen" : valgtmåltid;         // Det bruger en konditionel operator (? :), 
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton2.Checked)
-            {
-                valgtmåltid = "frokost";
-            }
+            valgtmåltid = radioButton1.Checked ? "frokost" : valgtmåltid;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton3.Checked)
-            {
-                valgtmåltid = "aftenmåltid";
-            }
+
+            valgtmåltid = radioButton1.Checked ? "aftenmåltid" : valgtmåltid;
+            
         }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string value = ingredienserListe.ToString(); 
+            string value = ingredienserListe.ToString();        //Formålet med denne linje kunne være at gemme en
+                                                                //tekstrepræsentation af indholdet i ingredienserListe i variablen value
             ingredienserListe.Clear();
             string key = textBox2.Text;
 
@@ -122,21 +121,23 @@ namespace øve_15._10._2023
         private void button4_Click(object sender, EventArgs e)
         {
           
-            string selectedKey = Menuer.SelectedItem?.ToString();
+            string sletMenu = Menuer.SelectedItem?.ToString();
 
-            if (string.IsNullOrEmpty(selectedKey))
+            if (string.IsNullOrEmpty(sletMenu ))                    //Dette tjekker, om sletMenu enten er null eller en tom streng
             {
                 MessageBox.Show("Vælg en menu du vil slette");
                 return;
             }
 
             
-            string[] parts = selectedKey.Split(':');
+            string[] parts = sletMenu.Split(':');     //Hvis sletMenu ikke er tom, fortsætter programmet med at opdele strengen sletMenu ved
+                                                      //hjælp af kolon (':') som separator. Resultatet er gemt i et array kaldet parts
             if (parts.Length == 2)
             {
-                string key = parts[0].Trim();
+                string key = parts[0].Trim();         //Dette tjekker, om parts-arrayet har præcis to elementer.
+                                                      //og koden inde i denne if-blok kan nu udføres.
 
-               
+
                 switch (valgtmåltid)
                 {
                     case "morgen":
