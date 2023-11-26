@@ -24,7 +24,7 @@ namespace øve_15._10._2023
 
 
 
-        public string SearchMenuAndGetIngredients(string menuName)
+        public string SøgIngrediens(string menuName)
         {
             string result = string.Empty;
 

@@ -266,7 +266,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(519, 547);
+            this.button6.Location = new System.Drawing.Point(499, 547);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 25;
@@ -311,7 +311,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Ingredienser";
+            this.Text = " ";
             this.panel1.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();

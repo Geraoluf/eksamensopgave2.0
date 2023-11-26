@@ -27,58 +27,72 @@ namespace øve_15._10._2023
             InitializeComponent();
         }
 
-       
+
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-           
-            valgtmåltid = radioButton1.Checked ? "morgen" : valgtmåltid;         // Det bruger en konditionel operator (? :), 
+            valgtmåltid = radioButton1.Checked ? "morgen" : valgtmåltid;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            valgtmåltid = radioButton1.Checked ? "frokost" : valgtmåltid;
+            valgtmåltid = radioButton2.Checked ? "frokost" : valgtmåltid;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-
-            valgtmåltid = radioButton1.Checked ? "aftenmåltid" : valgtmåltid;
-            
+            valgtmåltid = radioButton3.Checked ? "aftenmåltid" : valgtmåltid;
         }
-
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string value = ingredienserListe.ToString();        //Formålet med denne linje kunne være at gemme en
-                                                                //tekstrepræsentation af indholdet i ingredienserListe i variablen value
-            ingredienserListe.Clear();
-            string key = textBox2.Text;
-
-            switch (valgtmåltid)
+            try
             {
-                case "morgen":
-                    myDictionary1[key] = value;
-                    textBox1.Clear();
-                    textBox2.Clear();
-                    break;
+                string value = ingredienserListe.ToString();
+                ingredienserListe.Clear();
+                string key = textBox2.Text;
 
-                case "frokost":
-                    myDictionary2[key] = value;
-                    textBox1.Clear();
-                    textBox2.Clear();
-                    break;
+                // Check om menunavnet er tomt
+                if (string.IsNullOrWhiteSpace(key))
+                {
+                    throw new FormatException("Menunavnet må ikke være tomt.");
+                }
 
-                case "aftenmåltid":
-                    myDictionary3[key] = value;
-                    textBox1.Clear();
-                    textBox2.Clear();
-                    break;
+                switch (valgtmåltid)
+                {
+                    case "morgen":
+                        myDictionary1[key] = value;
+                        textBox1.Clear();
+                        textBox2.Clear();
+                        break;
 
-                default:
-                    MessageBox.Show("Du skal først vælge et måltid");
-                    break;
+                    case "frokost":
+                        myDictionary2[key] = value;
+                        textBox1.Clear();
+                        textBox2.Clear();
+                        break;
+
+                    case "aftenmåltid":
+                        myDictionary3[key] = value;
+                        textBox1.Clear();
+                        textBox2.Clear();
+                        break;
+
+                    default:
+                        MessageBox.Show("Du skal først vælge et måltid");
+                        break;
+                }
+            }
+            catch (FormatException ex)
+            {
+                // Vis en fejlmeddelelse med information fra undtagelsen
+                MessageBox.Show($"Fejl: {ex.Message}", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                // Generel fejlhåndtering for andre undtagelser
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -171,16 +185,16 @@ namespace øve_15._10._2023
         private void button5_Click(object sender, EventArgs e)
         {
             {
-                string searchMenu = textBox3.Text;
+                string søgMenu = textBox3.Text;
 
-                if (string.IsNullOrWhiteSpace(searchMenu))
+                if (string.IsNullOrWhiteSpace(søgMenu))
                 {
                     MessageBox.Show("Indtast venligst et menunavn at søge efter.");
                     return;
                 }
 
                 Søgmenu menuSearch = new Søgmenu(valgtmåltid, myDictionary1, myDictionary2, myDictionary3);
-                string result = menuSearch.SearchMenuAndGetIngredients(searchMenu);
+                string result = menuSearch.SøgIngrediens(søgMenu);
 
                 if (!string.IsNullOrEmpty(result))
                 {
@@ -188,38 +202,29 @@ namespace øve_15._10._2023
                 }
                 else
                 {
-                    MessageBox.Show($"Menuen med navnet '{searchMenu}' blev ikke fundet.");
+                    MessageBox.Show($"Menuen med navnet '{søgMenu}' blev ikke fundet.");
                 }
             }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            
-            Dato minDato = new Dato(2023, 12, 21);  //indtaster datoerne til dato klasse
 
-           
-            Slettedato obj = new Slettedato(minDato);  //kalder slutdatoklassen og bruger parameter minDato
-
-
-
-            MessageBox.Show(obj.HentSlettedato().ToString());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
         }
+
+
+
+
+
+
+
+
+
+
+
     }
+    
 
    
 }
