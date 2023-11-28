@@ -47,8 +47,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.SuspendLayout();
@@ -264,33 +262,12 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Søg på menunavn";
             // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(499, 547);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 25;
-            this.button6.Text = "Slet";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(317, 550);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 16);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Sletter alle menuer i år 2024";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1381, 612);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button5);
@@ -341,8 +318,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label1;
     }
 }
 

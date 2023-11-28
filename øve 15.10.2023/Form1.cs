@@ -29,7 +29,7 @@ namespace øve_15._10._2023
 
 
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)   //valg af måltid
         {
             valgtmåltid = radioButton1.Checked ? "morgen" : valgtmåltid;
         }
@@ -45,7 +45,7 @@ namespace øve_15._10._2023
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)  // gemmer i det rigtige Dictionary
         {
             try
             {
@@ -96,7 +96,8 @@ namespace øve_15._10._2023
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void button2_Click(object sender, EventArgs e)   // Viser indholdet af dictionary i listboxen
         {
             Menuer.Items.Clear();
 
@@ -123,7 +124,7 @@ namespace øve_15._10._2023
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)  //gemmer de intastet ingredienser i list ingredienser
         {
             string ingredienser = textBox1.Text;
             ingredienserListe.Add(ingredienser);
@@ -132,7 +133,7 @@ namespace øve_15._10._2023
 
         
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)  // fjerne gemte menuer
         {
           
             string sletMenu = Menuer.SelectedItem?.ToString();
@@ -182,36 +183,34 @@ namespace øve_15._10._2023
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            {
-                string søgMenu = textBox3.Text;
 
-                if (string.IsNullOrWhiteSpace(søgMenu))
+        private void button5_Click(object sender, EventArgs e)  // bruges til at søge gemte menuer
+        {
+            
+                string søgteMenu = textBox3.Text;
+
+                if (string.IsNullOrWhiteSpace(søgteMenu))
                 {
                     MessageBox.Show("Indtast venligst et menunavn at søge efter.");
                     return;
                 }
 
-                Søgmenu menuSearch = new Søgmenu(valgtmåltid, myDictionary1, myDictionary2, myDictionary3);
-                string result = menuSearch.SøgIngrediens(søgMenu);
+                Søgmenu søg = new Søgmenu(valgtmåltid, myDictionary1, myDictionary2, myDictionary3);
+                string resultatAfSøgning = søg.SøgIngrediens(søgteMenu);
 
-                if (!string.IsNullOrEmpty(result))
+
+                if (!string.IsNullOrEmpty(resultatAfSøgning))
                 {
-                    MessageBox.Show(result);
+                    MessageBox.Show(resultatAfSøgning);
                 }
                 else
                 {
-                    MessageBox.Show($"Menuen med navnet '{søgMenu}' blev ikke fundet.");
+                    MessageBox.Show($"Menuen med navnet '{søgteMenu}' blev ikke fundet.");
                 }
-            }
+            
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-          
-        }
+        
 
 
 

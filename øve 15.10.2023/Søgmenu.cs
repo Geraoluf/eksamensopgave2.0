@@ -26,28 +26,28 @@ namespace øve_15._10._2023
 
         public string SøgIngrediens(string menuName)
         {
-            string result = string.Empty;
+            string søgeResultat = string.Empty;
 
             switch (valgtmåltid)
             {
                 case "morgen":
                     if (myDictionary1.ContainsKey(menuName))
                     {
-                        result = myDictionary1[menuName];
+                        søgeResultat = myDictionary1[menuName];
                     }
                     break;
 
                 case "frokost":
                     if (myDictionary2.ContainsKey(menuName))
                     {
-                        result = myDictionary2[menuName];
+                       søgeResultat = myDictionary2[menuName];
                     }
                     break;
 
                 case "aftenmåltid":
                     if (myDictionary3.ContainsKey(menuName))
                     {
-                        result = myDictionary3[menuName];
+                        søgeResultat = myDictionary3[menuName];
                     }
                     break;
 
@@ -56,7 +56,7 @@ namespace øve_15._10._2023
                     break;
             }
 
-            return result;
+            return søgeResultat;
         }
 
     }
