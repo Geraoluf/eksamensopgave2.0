@@ -101,27 +101,24 @@ namespace øve_15._10._2023
         {
             Menuer.Items.Clear();
 
+            List<string> sortedItems = new List<string>();
+
             if (valgtmåltid == "morgen")
             {
-                foreach (var item in myDictionary1)
-                {
-                    Menuer.Items.Add($"{item.Key}: {item.Value}");
-                }
+                sortedItems.AddRange(myDictionary1.Select(item => $"{item.Key}: {item.Value}"));  //Kompakt kode: Lambda-udtryk og LINQ-metoder som Select og AddRange
             }
             else if (valgtmåltid == "frokost")
             {
-                foreach (var item in myDictionary2)
-                {
-                    Menuer.Items.Add($"{item.Key}: {item.Value}");
-                }
+                sortedItems.AddRange(myDictionary2.Select(item => $"{item.Key}: {item.Value}"));
             }
             else if (valgtmåltid == "aftenmåltid")
             {
-                foreach (var item in myDictionary3)
-                {
-                    Menuer.Items.Add($"{item.Key}: {item.Value}");
-                }
+                sortedItems.AddRange(myDictionary3.Select(item => $"{item.Key}: {item.Value}"));
             }
+
+            sortedItems.Sort();
+
+            Menuer.Items.AddRange(sortedItems.ToArray());
         }
 
         private void button3_Click(object sender, EventArgs e)  //gemmer de intastet ingredienser i list ingredienser
