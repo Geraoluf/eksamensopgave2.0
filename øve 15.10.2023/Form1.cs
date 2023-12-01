@@ -148,22 +148,38 @@ namespace øve_15._10._2023
                                                       //hjælp af kolon (':') som separator. Resultatet er gemt i et array kaldet parts
             if (parts.Length == 2)
             {
-                string key = parts[0].Trim();         //Dette tjekker, om parts-arrayet har præcis to elementer.
-                                                      //og koden inde i denne if-blok kan nu udføres.
 
+            
+            
+               string key = parts[0].Trim();
 
                 switch (valgtmåltid)
                 {
                     case "morgen":
-                        myDictionary1.Remove(key);
+                        if (myDictionary1.ContainsKey(key))
+                        {
+                            string valueToRemove = myDictionary1[key];
+                            myDictionary1.Remove(key);
+                            // Nu kan du gøre noget med værdien, hvis det er nødvendigt (f.eks. logge den)
+                        }
                         break;
 
                     case "frokost":
-                        myDictionary2.Remove(key);
+                        if (myDictionary2.ContainsKey(key))
+                        {
+                            string valueToRemove = myDictionary2[key];
+                            myDictionary2.Remove(key);
+                            // Nu kan du gøre noget med værdien, hvis det er nødvendigt (f.eks. logge den)
+                        }
                         break;
 
                     case "aftenmåltid":
-                        myDictionary3.Remove(key);
+                        if (myDictionary3.ContainsKey(key))
+                        {
+                            string valueToRemove = myDictionary3[key];
+                            myDictionary3.Remove(key);
+                            // Nu kan du gøre noget med værdien, hvis det er nødvendigt (f.eks. logge den)
+                        }
                         break;
 
                     default:
@@ -171,7 +187,6 @@ namespace øve_15._10._2023
                         break;
                 }
 
-                
                 button2_Click(sender, e);
 
                 MessageBox.Show("Menuen er slettet.");
