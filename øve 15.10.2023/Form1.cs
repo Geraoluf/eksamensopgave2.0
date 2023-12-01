@@ -15,6 +15,13 @@ namespace øve_15._10._2023
 {
     public partial class Form1 : Form
     {
+
+        public Form1()
+        {
+            InitializeComponent();
+            radioButton2.Checked = true;
+
+        }
         Ingredienser ingredienserListe = new Ingredienser(new List<string>());
 
         private Dictionary<string, string> myDictionary1 = new Dictionary<string, string>();
@@ -22,12 +29,9 @@ namespace øve_15._10._2023
         private Dictionary<string, string> myDictionary3 = new Dictionary<string, string>();
         string valgtmåltid;
 
-        public Form1()
-        {
-            InitializeComponent();
-        }
+       
 
-
+       
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)   //valg af måltid
         {
@@ -53,7 +57,7 @@ namespace øve_15._10._2023
                 ingredienserListe.Clear();
                 string key = textBox2.Text;
 
-                // Check om menunavnet er tomt
+                
                 if (string.IsNullOrWhiteSpace(key))
                 {
                     throw new FormatException("Menunavnet må ikke være tomt.");
@@ -79,19 +83,17 @@ namespace øve_15._10._2023
                         textBox2.Clear();
                         break;
 
-                    default:
-                        MessageBox.Show("Du skal først vælge et måltid");
-                        break;
+                   
                 }
             }
             catch (FormatException ex)
             {
-                // Vis en fejlmeddelelse med information fra undtagelsen
+                
                 MessageBox.Show($"Fejl: {ex.Message}", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                // Generel fejlhåndtering for andre undtagelser
+                
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
